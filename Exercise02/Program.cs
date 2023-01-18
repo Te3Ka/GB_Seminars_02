@@ -13,5 +13,11 @@
 */
 
 Console.WriteLine("Программа генерирует случайное трёхзначное целое положительное число, после чего удаляет из него вторую цифру и выводит полученный результат на экран.");
-int randomNumber = Random.Next(100, 1000);
+int randomNumber = new Random().Next(100, 1000);
 
+int firstDigit = randomNumber / 100 * 10;
+int secondDigit = randomNumber % 10;
+int resultNumber = firstDigit + secondDigit;
+
+Console.WriteLine("Сгенерированное число = " + randomNumber);
+Console.WriteLine("Результирующее число = " + resultNumber);
